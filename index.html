@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tracker Dashboard</title>
+
+<style>
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Background */
+body {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1740098159737-73673d741ebb?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Glass Container */
+.container {
+    width: 90%;
+    max-width: 900px;
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+/* Title */
+h1 {
+    color: red;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+/* Card */
+.card {
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Text */
+.card h2 {
+    color: white;
+    font-size: 18px;
+}
+
+/* Button */
+.btn {
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    transition: 0.3s;
+}
+
+/* Button Hover */
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0,255,255,0.6);
+}
+
+/* Disable text selection */
+body {
+    user-select: none;
+}
+
+/* Disable drag */
+img {
+    pointer-events: none;
+}
+
+</style>
+
+</head>
+
+<body oncontextmenu="return false;">
+
+<div class="container">
+    <h1>Moglix Trackers Dashboard</h1>
+
+    <div class="card">
+        <h2>Hyderabad(HYDS) Moglix Operations 2026 </h2>
+        <button class="btn" onclick="openLink('https://docs.google.com/spreadsheets/d/1EXdibIOuv_evcnTuDeJlLbnLoYR23MwMuyZ7rD_9_Aw/edit?usp=sharing')">Visit</button>
+    </div>
+
+    <div class="card">
+        <h2>HYDS INBOND & OUTBOND March-26 </h2>
+        <button class="btn" onclick="openLink('https://moglix-my.sharepoint.com/:x:/r/personal/murali_mala_moglix_com/Documents/HYDS%20INBOND%20%26%20OUTBOND%20March-26.xlsx?d=weef63c66b567402792f1bd625480ef2e&csf=1&web=1&e=l5FlFp')">Visit</button>
+    </div>
+
+    <div class="card">
+        <h2>HYDS standard form </h2>
+        <button class="btn" onclick="openLink('https://docs.google.com/spreadsheets/d/1-vJDPPBjiiChAK-sWkhBJjUjlk1dr-nIXpJeXh8mOVo/edit?usp=sharing')">Visit</button>
+    </div>
+
+    <div class="card">
+        <h2>Outbound Mail : outbound.hyds@moglix.com </h2>
+        <button class="btn" onclick="openLink('https://outlook.cloud.microsoft/mail/')">Visit</button>
+    </div>
+
+    <div class="card">
+        <h2>Inbound Mail : inbound.hyds@moglix.com </h2>
+        <button class="btn" onclick="openLink('https://outlook.cloud.microsoft/mail/')">Visit</button>
+    </div>
+        
+    <div class="card">
+        <h2>Log_10 Valmo </h2>
+        <button class="btn" onclick="openLink('https://console.valmo.in/operations/login')">Visit</button>
+    </div>
+
+</div>
+
+<script>
+function openLink(url) {
+    window.open(url, "_blank");
+}
+
+/* Disable keyboard shortcuts */
+document.addEventListener("keydown", function(e) {
+    if (e.ctrlKey && (e.key === 'c' || e.key === 'u' || e.key === 's')) {
+        e.preventDefault();
+    }
+});
+</script>
+
+</body>
+</html>
